@@ -15,7 +15,10 @@ This Snapshot makes use of the following Technologies:
 1. Install Home Assistant. Use any flavor or method. SUPERVISOR REQUIRED: https://www.home-assistant.io/installation/ . 
    This snapshot was taken on a RPI4 running HASSOS. You might need to reinstall DOODS when setting this up on a different platform. 
    You can do this through Supervisor>Addon Store. Settings should remain the same.
-2. Download this snapshot, and place it somewhere on the media/pc you installed HA on.
+2. Download the snapshot from the link below, and place it somewhere on the media/pc you installed HA on:
+
+   https://drive.google.com/file/d/1frckONxHyP6NvsX86Pr7h5TxC5ocO49V/view?usp=sharing
+   
 3. Boot Up Home Assistant
 4. Follow these instructions on restoring this snapshot, starting at #3: https://community.home-assistant.io/t/how-to-restore-a-snapshot/227688
 5. Default login details are as follows:
