@@ -27,6 +27,7 @@ This Snapshot makes use of the following Technologies:
    #### Add Network Camera
    The URL below would be unique to your camera. A google search should be able to help you find it. 
    Here is some info on Dahua cams: https://dahuawiki.com/Remote_Access/RTSP_via_VLC
+   
       URL: rtsp://<CamOrNVR_RTSP_URL>
       Username: <CamOrNVR Authentication Username>
       Password: <CamOrNVR Authentication Pass>
