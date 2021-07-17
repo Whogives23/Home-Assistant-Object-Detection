@@ -21,3 +21,21 @@ This Snapshot makes use of the following Technologies:
 5. Browse to Configuration>Users>steve AND CHANGE THE PASSWORD!! You can now add your own user here if you wish.
 
 ## Setup
+   ### MotionEye
+   #### Add Network Camera
+      URL: rtsp://<CamOrNVR_RTSP_URL>
+      Username: <CamOrNVR Authentication Username>
+      Password: <CamOrNVR Authentication Pass>
+      Camera: UDP or TCP should work
+   #### Change Camera Settings:
+   ##### Video Device:
+      Camera Name: <Something Descriptive>
+      Video Resolution: <Match your Cam/NVR Resolution>
+      Frame Rate: <25 is a good Start. Match your Cam/NVR if Possible>
+   ##### Motion Detection:
+      Auto Threshold Tuning: ON  (You can manually tune this if Auto doesnt work for you)
+      Motion Gap: 10 (Adjust this depending on how much movement this camera sees)
+      Captured Before/After: 1
+   ##### Motion Notification:
+      Call a Web Hook: http://homeassistant.local:8123/api/webhook/<camera_name>_motion  (This needs to match the webhook set in Home Assistant Automations)
+      HTTP Method: Post (form)
