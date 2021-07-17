@@ -75,7 +75,7 @@ Onto the config:
    * Save this file(ctrl+s on your keyboard)
    * Head over to Configuration>Server Controls, and hit Check Configuration. Address any issues with your config if its raised.
    * If your Config is Valid, Hit the restart button, and wait for Home assistant to restart.
-   * Once HA has restarted, head back to Developer Tools>Current Entities. You should see a image_processing entity for each camera you have added. If not, double check your configuration for incorrect capitalization or spelling.
+   * Once HA has restarted, head back to Developer Tools>Current Entities. You should see a **image_processing** entity for each camera you have added. If not, double check your configuration for incorrect capitalization or spelling.
    
    ### Home Assistant Automation Updates
    These base automations handle image processing upon motion detection, as well as sending a notification, and creating a backup of the image if an object was detected.
