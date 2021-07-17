@@ -24,10 +24,25 @@ This Snapshot makes use of the following Technologies:
 5. Browse to Configuration>Users>steve AND CHANGE THE PASSWORD!! You can now add your own user here if you wish.
 
 ## Setup
+
+The Snapshot has a single camera(named backyard) set up from end to end. it would be best to only change this cameras settings in MotionEye, **keeping the Camera Name as backyard**, and see if all other setup works as is. If so, then go ahead and start cloning/editing these settings/config/automations for your other cameras.
+
+If it works as expected, you should be seeing notifications pop up in the notifications tab, as well as images showing up in the Media Browser tab when motion, persons, or cars are detected.
+
+The #1 thing to check if something isnt working, is if you are using the right local Home Assistant URL in all files and configurations. 
+
+These are the common URLs to use: http://homeassistant.local:8123, http://homeassistant.localdomain:8123, http://homeassistant:8123, http://<YourLocalHAIPAddress>:8123.
+
+This should be checked in the following locations: Configuration.yaml,Automations.yaml, MotionEye Motion Notification Web Hook URL
+   
+Onto the config:
+
    ### MotionEye: 
    #### Guide: https://www.youtube.com/watch?v=e27jyEcE5lU
    Please Change the password on default credentials once logged in:
+   
    Username: admin
+   
    Password: password1234$
    #### Add Network Camera
    The URL below would be unique to your camera. A google search should be able to help you find it. 
@@ -36,7 +51,7 @@ This Snapshot makes use of the following Technologies:
       URL: rtsp://<CamOrNVR_RTSP_URL>
       Username: <CamOrNVR Authentication Username>
       Password: <CamOrNVR Authentication Pass>
-      Camera: UDP or TCP should work
+      Camera: UDP or TCP should work if the option is presented
    #### Change Camera Settings:
    ##### Video Device:
       Camera Name: <Something Descriptive>
@@ -49,3 +64,25 @@ This Snapshot makes use of the following Technologies:
    ##### Motion Notification:
       Call a Web Hook: http://homeassistant.local:8123/api/webhook/<camera_name>_motion  (This needs to match the webhook set in Home Assistant Automations)
       HTTP Method: Post (form)
+   ### Home Assistant Configuration
+   * You will need to restart Home Assistant after each camera is added to MotionEye in order for the relevant entities to pull through.
+     
+     To restart: Configuration>Server Controls>Restart
+   
+   * Your camera entities should now show up under: Developer Tools>Current Entities>[search for camera]
+   * Note Down these camera entities, and add them to the configuration.yaml, under **image_processing**
+   * Also in the configuration.yaml, you will find a section called shell_command. Now is a good time to copy these commands for each camera you are adding, and changing **backyard** to a the Camera Name you specified. **_spaces must be replaced with underscores_**
+   * Save this file(ctrl+s on your keyboard)
+   * Head over to Configuration>Server Controls, and hit Check Configuration. Address any issues with your config if its raised.
+   * If your Config is Valid, Hit the restart button, and wait for Home assistant to restart.
+   * Once HA has restarted, head back to Developer Tools>Current Entities. You should see a image_processing entity for each camera you have added. If not, double check your configuration for incorrect capitalization or spelling.
+   
+   ### Home Assistant Automation Updates
+   These base automations handle image processing upon motion detection, as well as sending a notification, and creating a backup of the image if an object was detected.
+   
+   You can either clone and edit these automations using the Visual Studio Code editor included(note the comments in these files) if you are comfortable with yaml syntax, or you can edit/clone these automations using Home Assistants UI. 
+   
+   I will make use of the UI for this guide.
+   
+     
+   
