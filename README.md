@@ -34,6 +34,9 @@ If it works as expected, you should be seeing notifications pop up in the notifi
 ![image](https://user-images.githubusercontent.com/46109936/126046244-9e2d1908-59d9-42bf-863a-dde58881cf02.png)
 
 
+![image](https://user-images.githubusercontent.com/46109936/126049465-d50d7adf-ceb8-44a4-a788-10c612d27121.png)
+
+
 
 The #1 thing to check if something isnt working, is if you are using the right local Home Assistant URL in all files and configurations. 
 
