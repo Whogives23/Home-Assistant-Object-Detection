@@ -12,7 +12,9 @@ This Snapshot makes use of the following Technologies:
 
 ## Installing:
 #### Installation Guide: https://www.youtube.com/watch?v=SHg6fa0x7OA
-1. Install Home Assistant. Use any flavor or method. SUPERVISOR REQUIRED: https://www.home-assistant.io/installation/
+1. Install Home Assistant. Use any flavor or method. SUPERVISOR REQUIRED: https://www.home-assistant.io/installation/ . 
+   This snapshot was taken on a RPI4 running HASSOS. You might need to reinstall DOODS when setting this up on a different platform. 
+   You can do this through Supervisor>Addon Store. Settings should remain the same.
 2. Download this snapshot, and place it somewhere on the media/pc you installed HA on.
 3. Boot Up Home Assistant
 4. Follow these instructions on restoring this snapshot, starting at #3: https://community.home-assistant.io/t/how-to-restore-a-snapshot/227688
@@ -24,6 +26,9 @@ This Snapshot makes use of the following Technologies:
 ## Setup
    ### MotionEye: 
    #### Guide: https://www.youtube.com/watch?v=e27jyEcE5lU
+   Please Change the password on default credentials once logged in:
+   Username: admin
+   Password: password1234$
    #### Add Network Camera
    The URL below would be unique to your camera. A google search should be able to help you find it. 
    Here is some info on Dahua cams: https://dahuawiki.com/Remote_Access/RTSP_via_VLC
