@@ -84,5 +84,27 @@ Onto the config:
    
    I will make use of the UI for this guide.
    
+   * There are 3 base Automations that handle Object Detection:
+   
+     Object Detection,<Camera Name> : This Automation gets triggered by the webhook set up in MotionEye for the relevant camera. It Calls **image_processing(DOODS)** which analyzes the image, and see if any of the objects(labels) stated in the configuration.yaml are found.
+   
+     Notification, <Camera Name>,Car Detected: This Automation is triggered when the **image_processing** entity related to the specific Camera returns **car** or **truck**. It then sends a notification to the specified device(in this case, just Home Assistant), as well as copies the processed image to the shared folder with a date tag.
      
+     Notification, <Camera Name>, Person Detected: Same as above, but just for a person.
+   
+   * To clone an Automation go to Configuration>Automation>[Edit on Relevant Automation]>[3Dots top right hand corner>Duplicate Automation
+   * Update the Automation Name, Description, Trigger and Action to the entities relevant to the camera you are targeting.
+   
+     Example: If you are cloning Object Detection for using with a camera called Frontdoor:
+   
+         Trigger:
+         
+            Trigger ID: frontdoor_motion
+   
+            Webhook ID: frontdoor_motion
+   
+            
+         Action:
+            Image Processing Target: Doods frontdoor
+            Notification Message: Motion Detected At Front Door
    
