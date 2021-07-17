@@ -67,7 +67,8 @@ Onto the config:
       Password: <CamOrNVR Authentication Pass>
       Camera: UDP or TCP should work if the option is presented
    
-   ![image](https://user-images.githubusercontent.com/46109936/126047711-63d529cc-9208-4c62-9f83-4077c28cae7e.png)
+   ![image](https://user-images.githubusercontent.com/46109936/126049210-1b617251-94ac-47a3-a462-22c08a156364.png)
+
 
    #### Change Camera Settings:
    ##### Video Device:
@@ -75,7 +76,8 @@ Onto the config:
       Video Resolution: <Match your Cam/NVR Resolution>
       Frame Rate: <25 is a good Start. Match your Cam/NVR if Possible>
    
-   ![image](https://user-images.githubusercontent.com/46109936/126047749-4ab69959-9c84-4533-98af-8336ca79c55d.png)
+  ![image](https://user-images.githubusercontent.com/46109936/126049239-f5871a03-a5b3-4686-bc23-4352cc624ac3.png)
+
 
    ##### Motion Detection:
       Auto Threshold Tuning: ON  (You can manually tune this if Auto doesnt work for you)
