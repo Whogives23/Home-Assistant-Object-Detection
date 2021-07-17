@@ -11,6 +11,7 @@ This Snapshot makes use of the following Technologies:
 * Automations (HA Native): https://www.home-assistant.io/docs/automation/
 
 ## Installing:
+#### Installation Guide: https://www.youtube.com/watch?v=SHg6fa0x7OA
 1. Install Home Assistant. Use any flavor or method. SUPERVISOR REQUIRED: https://www.home-assistant.io/installation/
 2. Download this snapshot, and place it somewhere on the media/pc you installed HA on.
 3. Boot Up Home Assistant
@@ -21,7 +22,8 @@ This Snapshot makes use of the following Technologies:
 5. Browse to Configuration>Users>steve AND CHANGE THE PASSWORD!! You can now add your own user here if you wish.
 
 ## Setup
-   ### MotionEye
+   ### MotionEye: 
+   #### Guide: https://www.youtube.com/watch?v=e27jyEcE5lU
    #### Add Network Camera
       URL: rtsp://<CamOrNVR_RTSP_URL>
       Username: <CamOrNVR Authentication Username>
